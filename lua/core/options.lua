@@ -16,6 +16,10 @@ opt.mouse = 'a'                                 -- Enable mouse support
 opt.clipboard = 'unnamedplus'                   -- Copy/paste to system clipboard
 opt.swapfile = false                            -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'   -- Autocomplete options
+-- Modify update times
+--  See `:help updatetime` and `:help timeoutlen`
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -39,10 +43,6 @@ opt.fillchars:append('eob: ') -- Disables ~ at end of buffer
 -- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
--- Modify update times
---  See `:help updatetime` and `:help timeoutlen`
--- vim.o.updatetime = 250
--- vim.o.timeoutlen = 300
 
 -----------------------------------------------------------
 -- Tabs, indent
