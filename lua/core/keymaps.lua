@@ -55,6 +55,11 @@ map('n', 'tn', '<cmd>set number!<cr>', { desc = 'Toggle line numbers' })
 map('n', '<C-/>', '<cmd>terminal<cr>', { desc = 'Open terminal' })
 
 -----------------------------------------------------------
+-- Lazy
+-----------------------------------------------------------
+map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+
+-----------------------------------------------------------
 -- Miscellaneous
 -----------------------------------------------------------
 -- Reload configuration
@@ -62,4 +67,5 @@ map('n', '<leader>r', '<cmd>source %<cr>', { desc = 'Reload configuration' })
 
 -- Close editor
 map('n', '<leader>q', '<cmd>q<cr>', { desc = 'Close editor' })
+map('n', '<leader>qa', '<cmd>qa<cr>', { desc = 'Quit all' })
 -- map('n', '<leader>qq', '<cmd>q!<cr>', { desc = 'Close without saving (:q!)' })
