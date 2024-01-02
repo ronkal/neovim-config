@@ -76,3 +76,9 @@ autocmd('BufLeave', {
   pattern = 'term://*',
   command = 'stopinsert'
 })
+
+-- Close terminal on exit
+autocmd('TermClose', {
+  pattern = 'term://*',
+  command = 'lua vim.api.nvim_input("<cr>")'
+})
