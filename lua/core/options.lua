@@ -33,6 +33,7 @@ opt.termguicolors = true    -- Enable 24-bit RGB colors
 opt.laststatus = 3          -- Set global statusline
 opt.signcolumn = 'yes'      -- Set signcolumn
 opt.hlsearch = false        -- Disables hlsearch
+opt.fillchars:append('eob: ') -- Disables ~ at end of buffer
 
 -- See `:help mapleader`
 -- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -66,4 +67,3 @@ opt.updatetime = 250    -- ms to wait for trigger an event
 -----------------------------------------------------------
 -- Disable nvim intro
 -- opt.shortmess:append "sI"    -- See `:help shortmess`
-
