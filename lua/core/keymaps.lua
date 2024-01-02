@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
   if opts then
     options = vim.tbl_extend('force', options, opts)
   end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- Change leader to <Space>
@@ -16,7 +16,7 @@ vim.g.mapleader = ' '
 -----------------------------------------------------------
 -- File saving
 -----------------------------------------------------------
-map('n', '<C-s>', '<cmd>w<cr>', { desc = 'Save the current buffer' })
+map({'n', 'i'}, '<C-s>', '<cmd>w<cr>', { desc = 'Save the current buffer' })
 map('n', '<leader><C-s>', '<cmd>wa<cr>', { desc = 'Save all the buffers' })
 
 -----------------------------------------------------------
