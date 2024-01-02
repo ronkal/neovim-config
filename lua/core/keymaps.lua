@@ -68,4 +68,4 @@ map('n', '<leader>r', '<cmd>source %<cr>', { desc = 'Reload configuration' })
 -- Close editor
 map('n', '<leader>q', '<cmd>q<cr>', { desc = 'Close editor' })
 map('n', '<leader>qa', '<cmd>qa<cr>', { desc = 'Quit all' })
--- map('n', '<leader>qq', '<cmd>q!<cr>', { desc = 'Close without saving (:q!)' })
+map('n', '<leader>qq', '<cmd>q!<cr>', { desc = 'Close without saving (:q!)' })
