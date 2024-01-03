@@ -18,8 +18,9 @@ opt.swapfile = false                            -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'   -- Autocomplete options
 -- Modify update times
 --  See `:help updatetime` and `:help timeoutlen`
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+opt.updatetime = 250
+opt.timeoutlen = 300
+opt.undofile = true                             -- Save undo history
 
 -----------------------------------------------------------
 -- Neovim UI
