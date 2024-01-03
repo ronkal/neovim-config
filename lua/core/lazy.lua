@@ -320,6 +320,12 @@ require("lazy").setup({
       }
     end
   },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 },
 
 -- Lazy options
