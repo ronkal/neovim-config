@@ -410,7 +410,12 @@ require("lazy").setup({
     config = function()
       require('mini.bufremove').setup {}
     end
-  }
+  },
+
+  -- LSP/Mason
+  require('lsp/lspconfig').mason,
+  require('lsp/lspconfig').mason_lspconfig,
+  require('lsp/lspconfig').nvim_lspconfig,
 },
 
 -- Lazy options
