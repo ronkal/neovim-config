@@ -325,7 +325,20 @@ require("lazy").setup({
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-  }
+  },
+
+  -- To-do comments
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local map = vim.keymap.set
+
+      map('n', '<leader>ft', '<cmd>TodoTelescope<cr>', { desc = 'Search to-do comments' })
+
+      require('todo-comments').setup {}
+    end
+  },
 },
 
 -- Lazy options
