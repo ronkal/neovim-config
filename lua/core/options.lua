@@ -21,6 +21,8 @@ opt.completeopt = 'menuone,noinsert,noselect'   -- Autocomplete options
 opt.updatetime = 250
 opt.timeoutlen = 300
 opt.undofile = true                             -- Save undo history
+opt.spell = true                                -- Activate spell-checking
+opt.spelllang = { "en" }
 
 -----------------------------------------------------------
 -- Neovim UI
