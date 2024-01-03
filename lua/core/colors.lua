@@ -30,7 +30,9 @@ M.rose_pine = {
       --- @usage 'auto'|'main'|'moon'|'dawn'
       variant = 'auto',
       --- @usage 'main'|'moon'|'dawn'
-      dark_variant = 'moon'
+      dark_variant = 'moon',
+      disable_italics = true,
+      disable_background = true,
     }
   end
 }
