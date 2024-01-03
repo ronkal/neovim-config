@@ -39,6 +39,7 @@ opt.laststatus = 3          -- Set global statusline
 opt.signcolumn = 'yes'      -- Set signcolumn
 opt.hlsearch = false        -- Disables hlsearch
 opt.fillchars:append('eob: ') -- Disables ~ at end of buffer
+opt.showmode = false        -- Don't show mode since we have a status line
 
 -----------------------------------------------------------
 -- Tabs, indent
