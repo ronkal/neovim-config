@@ -69,9 +69,10 @@ map('n', 'tn', '<cmd>set number!<cr>', { desc = 'Toggle line numbers' })
 map('n', '<C-/>', '<cmd>terminal<cr>', { desc = 'Open terminal' })
 
 -----------------------------------------------------------
--- Lazy
+-- Menus
 -----------------------------------------------------------
 map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+map('n', '<leader>m', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 -----------------------------------------------------------
 -- LSP
@@ -86,8 +87,8 @@ map({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, { desc = 'Code actions' 
 map('n', 'K', vim.lsp.buf.hover, { desc = 'Hover' })
 map('n', '<space>f', function()
   vim.lsp.buf.format { async = true }
-end, { desc = 'Format code'})
-map('n', '<space>rn', vim.lsp.buf.rename, { desc = 'Global rename'})
+end, { desc = 'Format code' })
+map('n', '<space>rn', vim.lsp.buf.rename, { desc = 'Global rename' })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
