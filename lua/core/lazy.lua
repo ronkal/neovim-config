@@ -88,14 +88,14 @@ require("lazy").setup({
           header = vim.split(logo, "\n"),
           -- stylua: ignore
           center = {
-            { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
-            { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
-            { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
-            { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
+            { action = "Telescope find_files", desc = " Find file", icon = " ", key = "f" },
+            { action = "ene | startinsert", desc = " New file",icon = " ", key = "n" },
+            { action = "Telescope oldfiles", desc = " Recent files", icon = " ", key = "r" },
+            { action = "Telescope live_grep", desc = " Find text", icon = " ", key = "g" },
             -- { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
             -- { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-            { action = "Lazy",                                                     desc = " Lazy",            icon = " ", key = "l" },
-            { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
+            { action = "Lazy", desc = " Lazy", icon = " ", key = "l" },
+            { action = "qa", desc = " Quit", icon = " ", key = "q" },
           },
           footer = function()
             local stats = require("lazy").stats()
@@ -152,6 +152,35 @@ require("lazy").setup({
       },
     },
     main = "ibl",
+  },
+
+  -- Telescope
+  {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      local builtin = require('telescope.builtin')
+      local map = vim.keymap.set
+      local actions = require('telescope.actions')
+      local action_layout = require('telescope.actions.layout')
+
+      require('telescope').setup {
+        defaults = {
+          mappings = {
+            i = {
+              ["<esc>"] = actions.close,
+              ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
+              ["<M-p>"] = action_layout.toggle_preview
+            }
+          }
+        }
+      }
+
+      map('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
+      map('n', '<leader>fg', builtin.live_grep, { desc = 'Find live' })
+      map('n', '<leader>fb', builtin.buffers, { desc = 'Find buffer' })
+--      map('n', '<leader>fh', builtin.find_files, { desc = '' })
+    end
   },
 },
 
