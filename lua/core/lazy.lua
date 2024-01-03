@@ -347,6 +347,14 @@ require("lazy").setup({
     config = function()
       require('gitsigns').setup {}
     end
+  },
+
+  {
+    'echasnovski/mini.bufremove',
+    version = false,
+    config = function()
+      require('mini.bufremove').setup {}
+    end
   }
 },
 

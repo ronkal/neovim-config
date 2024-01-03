@@ -55,6 +55,7 @@ map('n', '<leader>bP', '<cmd>BufferLineGroupClose ungrouped<cr>', { desc = 'Dele
 map('n', '<leader>bo', '<cmd>BufferLineCloseOthers<cr>', { desc = 'Delete other buffers' })
 map('n', '<leader>br', '<cmd>BufferLineCloseRight<cr>', { desc = 'Delete buffers to the right' })
 map('n', '<leader>bl', '<cmd>BufferLineCloseLeft<cr>', { desc = 'Delete buffers to the left' })
+map('n', '<leader>bd', '<cmd>lua MiniBufremove.delete()<cr>', { desc = 'Delete buffer'} )
 
 -----------------------------------------------------------
 -- Configuration
