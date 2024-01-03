@@ -85,9 +85,6 @@ map('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to prev diagnostic' })
 map('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 map({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, { desc = 'Code actions' })
 map('n', 'K', vim.lsp.buf.hover, { desc = 'Hover' })
-map('n', '<leader>f', function()
-  vim.lsp.buf.format { async = true }
-end, { desc = 'Format code' })
 map('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'Global rename' })
 
 -- Use LspAttach autocommand to only map the following keys

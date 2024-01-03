@@ -418,6 +418,9 @@ require("lazy").setup({
   require('lsp/lspconfig').mason,
   require('lsp/lspconfig').mason_lspconfig,
   require('lsp/lspconfig').nvim_lspconfig,
+
+  -- Formatter
+  require('plugins').conform,
 },
 
 -- Lazy options
