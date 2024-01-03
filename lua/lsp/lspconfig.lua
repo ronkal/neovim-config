@@ -19,6 +19,8 @@ local servers = {
 
 -- TODO: Add a way to install also formatters, and linters alongside the plugins.
 -- See https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
+-- See https://github.com/williamboman/mason.nvim/blob/main/doc/reference.md
+-- See https://github.com/williamboman/mason-lspconfig.nvim/issues/83#issuecomment-1282373335
 -- local formatters = {
 --   "black",
 -- }
