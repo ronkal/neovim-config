@@ -42,6 +42,19 @@ map('n', '<C-l>', '<C-w>l', { desc = 'Move to right window' })
 map('n', '<leader>wk', '<C-w>t<C-w>K', { desc = 'Change vertical to horizontal' })
 map('n', '<leader>wh', '<C-w>t<C-w>H', { desc = 'Change horizontal to vertical' })
 map('i', 'kk', '<esc>')    -- Map Esc to kk
+map('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Prev buffer' })
+map('n', '<S-l>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Next buffer' })
+
+-----------------------------------------------------------
+-- Buffers
+-----------------------------------------------------------
+map('n', ']b', '<cmd>BufferLineMoveNext<cr>', { desc = 'Move buffer to the right' })
+map('n', 'b[', '<cmd>BufferLineMovePrev<cr>', { desc = 'Move buffer to the left' })
+map('n', '<leader>bp', '<cmd>BufferLineTogglePin<cr>', { desc = 'Toggle buffer pin' })
+map('n', '<leader>bP', '<cmd>BufferLineGroupClose ungrouped<cr>', { desc = 'Delete non-pinned buffers' })
+map('n', '<leader>bo', '<cmd>BufferLineCloseOthers<cr>', { desc = 'Delete other buffers' })
+map('n', '<leader>br', '<cmd>BufferLineCloseRight<cr>', { desc = 'Delete buffers to the right' })
+map('n', '<leader>bl', '<cmd>BufferLineCloseLeft<cr>', { desc = 'Delete buffers to the left' })
 
 -----------------------------------------------------------
 -- Configuration
