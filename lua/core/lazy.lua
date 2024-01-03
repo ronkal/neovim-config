@@ -284,12 +284,41 @@ require("lazy").setup({
       vim.o.timeout = true
       vim.o.timeoutlen = 500
     end,
+    config = function()
+      require('which-key').setup {}
+    end,
   },
 
   -- Session saving
   {
     "folke/persistence.nvim",
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
+    config = function()
+      require('persistence').setup {}
+    end
+  },
+
+  -- Pairs
+  {
+    'echasnovski/mini.pairs',
+    version = false, -- From Main, not Stable
+    config = function()
+      require('mini.pairs').setup {
+        mappings = {
+          ['('] = { action = 'open', pair = '()', neigh_pattern = '[^\\].' },
+          ['['] = { action = 'open', pair = '[]', neigh_pattern = '[^\\].' },
+          ['{'] = { action = 'open', pair = '{}', neigh_pattern = '[^\\].' },
+
+          [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
+          [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
+          ['}'] = { action = 'close', pair = '{}', neigh_pattern = '[^\\].' },
+
+          ['"'] = { action = 'closeopen', pair = '""', neigh_pattern = '[^\\].', register = { cr = false } },
+          ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^%a\\].', register = { cr = false } },
+          ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^\\].', register = { cr = false } },
+        },
+      }
+    end
   },
 },
 
