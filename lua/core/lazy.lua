@@ -182,6 +182,39 @@ require("lazy").setup({
 --      map('n', '<leader>fh', builtin.find_files, { desc = '' })
     end
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+        ensure_installed = {
+          'bash',
+          'c',
+          'cpp',
+          'comment',
+          'css',
+          'git_rebase',
+          'gitcommit',
+          'gitignore',
+          'html',
+          'javascript',
+          'json',
+          'lua',
+          'markdown',
+          'markdown_inline',
+          'python',
+          'sql',
+          'tsx',
+          'typescript',
+        },
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end
+  },
 },
 
 -- Lazy options
