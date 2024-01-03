@@ -340,6 +340,14 @@ require("lazy").setup({
       require('todo-comments').setup {}
     end
   },
+
+  -- Gitsigns
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup {}
+    end
+  }
 },
 
 -- Lazy options
