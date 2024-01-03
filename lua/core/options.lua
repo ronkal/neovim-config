@@ -39,11 +39,6 @@ opt.signcolumn = 'yes'      -- Set signcolumn
 opt.hlsearch = false        -- Disables hlsearch
 opt.fillchars:append('eob: ') -- Disables ~ at end of buffer
 
--- See `:help mapleader`
--- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
