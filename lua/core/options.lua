@@ -52,7 +52,7 @@ opt.shiftround = true   -- Round indent to multiple of 'shiftwidth'
 -----------------------------------------------------------
 -- Memory, CPU
 -----------------------------------------------------------
-opt.hidden = true       -- Eanble background buffers
+opt.hidden = true       -- Enable background buffers
 opt.history = 100       -- Remember N lines in history
 opt.lazyredraw = true   -- Faster scrolling
 opt.updatetime = 250    -- ms to wait for trigger an event
