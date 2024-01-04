@@ -1,9 +1,10 @@
 local M = {}
 
 M.completion = {
-	{
-		"hrsh7th/cmp-nvim-lsp",
-	},
+	-- Fancy icons!
+	{ "onsails/lspkind.nvim" },
+
+	{ "hrsh7th/cmp-nvim-lsp" },
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
@@ -23,6 +24,7 @@ M.completion = {
 
 			local luasnip = require("luasnip")
 			local cmp = require("cmp")
+			local lspkind = require("lspkind")
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -73,6 +75,20 @@ M.completion = {
 				}, {
 					{ name = "buffer" },
 				}),
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						maxwidth = 50,
+						ellipsis_char = "...",
+						menu = {
+							buffer = "[Buffer]",
+							nvim_lsp = "[LSP]",
+							luasnip = "[LuaSnip]",
+							nvim_lua = "[Lua]",
+							latex_symbols = "[Latex]",
+						},
+					}),
+				},
 			})
 		end,
 	},
