@@ -468,6 +468,9 @@ require("lazy").setup(
 
 		-- Formatter
 		require("plugins").conform,
+
+		-- Completion
+		require("plugins").completion,
 	},
 
 	-- Lazy options
